@@ -1,8 +1,19 @@
 //Crea una funcion que recree la sucesion de Fibonacci hasta el numero 
 // deseado mas cercano.
 
-function fibonacci(n) {
-  if (n <= 1) return n;
-  return fibonacci(n - 1) + fibonacci(n - 2);
+// Función para calcular un número específico
+function calcularFibonacci(num) {
+  if (num <= 1) return num;
+  return calcularFibonacci(num - 1) + calcularFibonacci(num - 2);
 }
-fibonacci(20);
+
+
+function fibonacci(c) {
+  let resultados = [];
+  for (let i = 0; i <= c; i++) {
+    resultados.push(calcularFibonacci(i));
+  }
+  return resultados;
+}
+
+console.log(fibonacci(10));
